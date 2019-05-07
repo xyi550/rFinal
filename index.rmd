@@ -48,4 +48,4 @@ homelessData %>%
 
 In addition to a simple leaflet image, I've also included some buttons to make navigation a bit easier. Additionally, I found that we can add custom Javascript functions to the map - as such, I've added a simple Javascript popup to give more information about the map.
 
-Finally, this project has been uploaded to rpubs by publishing using rStudio. Instructions are found here: https://rpubs.com/about/getting-started
+Finally, this project has been uploaded to Github by publishing using rStudio and GIT. Instructions are found here: https://resources.github.com/whitepapers/github-and-rstudio/
