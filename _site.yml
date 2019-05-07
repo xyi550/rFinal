@@ -1,0 +1,8 @@
+name: "my-website"
+navbar:
+  title: "Homelessness in NY"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html

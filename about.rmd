@@ -1,0 +1,37 @@
+---
+title: "About This Project"
+---
+***
+This is the final project for the STA 4233, or the _Introduction to Programming & Data Management in R_ course.
+
+***
+### About R
+
+R is known as a programming language to many; however, it is a highly capable and versatile tool which can function on different levels. According to [r-project.org](https://www.r-project.org/about.html), it is "a language and environment for statistical computing and graphics"
+
+Throughout this course, it is evident that this description is wholly inadequate in describing the true power of R. In addition to processing huge sets of data, R has shown itself more than equal to the task of:
+
+1. Plotting charts
+2. Building maps
+  + including drill-down data
+  + coloring and other graphics
+3. Outputting data in various file formats, such as:
+  + PDF
+  + CSV
+  + JPG
+  + PNG
+4. Creation of multiple file types, including:
+  + Presentations
+  + HTML websites
+
+In addition, R supports a vast number of plugins and extensions, granting greater flexibility and additional capabilities. For example, data in newer formats such as Microsoft's Excel can be imported using the XLSX package - a readily available plugin. Moreover, R can be developed using a variety of tools, including the open source R GUI, or the powerful R Studio software.  
+
+***
+### About this Project
+
+As a part of STA 4233's final project, we were asked to build a website using R Markdown, including a map created in Leaflet. This provided me with a prime opportunity to examine a cause for which I feel strongly - homelessness. There is no doubt that homelessness is on the rise nationwide - I've seen the encampments and makeshift lean-tos in tent cities and have worked with the homeless in shelters, rehabilitation homes and on the streets. As a result, I immediately thought of researching homelessness when we were assigned this project.
+
+***
+### About the Author
+
+My name is Mariam Naqvi, and I am a fourth year student at the University of Texas at San Antonio. I am currently pursuing a degree in *Business Administration* with a concentration in *Management Sciences* - as a result, I chose courses involving statistics, R and SAS programming and applied mathematics. 

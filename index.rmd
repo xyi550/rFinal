@@ -1,0 +1,46 @@
+---
+title: "Homeless Encampments in New York"
+---
+
+Hello, visitor!
+
+During a recent visit to New York, I was shocked by the number of homeless people I encountered. I found people in various states, ranging from those living on park benches, to working poor, living in tent encampments.
+
+I chose to find data based onn the homelessness in that state specifically, from https://data.cityofnewyork.us/Social-Services/Homeless-Encampments/jufg-yyky, where we can collect data from the NYC OpenData Database.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE} 
+
+#Install if needed
+#install.packages("leaflet")
+#install.packages("rmarkdown")
+
+#Load the required libraries
+library(leaflet)
+library(htmltools)
+library(htmlwidgets)
+
+# Our input data set
+homelessData <- read.csv("homeless_encampment.csv", header = TRUE, sep = ",")
+#remove those with null lat/long values (can't map those anyway)
+homelessData <- homelessData[!is.na(homelessData$Longitude)&!is.na(homelessData$Latitude),]
+#remove those with no resolution data (since they were unresolved)
+homelessData <- homelessData[!is.na(homelessData$Resolution.Description),]
+
+homelessData %>% 
+  leaflet() %>% 
+  addTiles() %>% 
+  addEasyButton(easyButton(
+    icon="fa-globe", title="Zoom to Level 1",
+    onClick=JS("function(btn, map){ map.setZoom(1); }"))) %>%
+  addEasyButton(easyButton(
+    icon="fa-crosshairs", title="Locate Me",
+    onClick=JS("function(btn, map){ alert('This map contains data about homeless encampments in New York, from 2010 onwards.'); }"))) %>%
+  addMarkers(popup=homelessData$Resolution.Description, clusterOptions=markerClusterOptions())
+
+
+
+```
+
+In addition to a simple leaflet image, I've also included some buttons to make navigation a bit easier. Additionally, I found that we can add custom Javascript functions to the map - as such, I've added a simple Javascript popup to give more information about the map.
+
+Finally, this project has been uploaded to rpubs by publishing using rStudio. Instructions are found here: https://rpubs.com/about/getting-started
